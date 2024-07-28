@@ -1,0 +1,16 @@
+import jakarta.servlet.http.HttpServlet;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.*;
+
+public class SecondServlet extends HttpServlet {
+    @Override
+    public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        res.getWriter().println("Hello from SecondServlet");
+        
+    }
+    
+}
+

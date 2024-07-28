@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.1.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+
+    implementation 'com.google.guava:guava:31.1-jre'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.war {
+    from 'src/main/webapp' // This is where your JSPs and static files should be placed
+}
+
+sourceCompatibility = '22'
+targetCompatibility = '22'

@@ -1,0 +1,3 @@
+Req, res -> {
+    get the use data;
+}
