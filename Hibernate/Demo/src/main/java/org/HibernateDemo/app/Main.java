@@ -1,6 +1,6 @@
-package org.HIbernateDemo.app;
+package org.HibernateDemo.app;
 
-import org.HIbernateDemo.model.Student;
+import org.HibernateDemo.model.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,6 +13,7 @@ public class Main {
 
         // Step 2: Configure hibernate.cfg.xml file to Configuration Object
         config.configure("hibernate.cfg.xml");
+        config.addAnnotatedClass(Student.class);
 
         // Step 3: Create session factory object
         SessionFactory sessionFactory = config.buildSessionFactory();

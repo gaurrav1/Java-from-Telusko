@@ -37,6 +37,6 @@
             true
         </property>
 
-        <mapping class="org.HIbernateDemo.model.Student" />
+        <mapping class="org.HibernateDemo.model.Student" />
     </session-factory>
 </hibernate-configuration>

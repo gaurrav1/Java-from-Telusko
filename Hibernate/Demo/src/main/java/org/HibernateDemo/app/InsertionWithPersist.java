@@ -1,6 +1,6 @@
-package org.HIbernateDemo.app;
+package org.HibernateDemo.app;
 
-import org.HIbernateDemo.model.Student;
+import org.HibernateDemo.model.Student;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,6 +18,7 @@ public class InsertionWithPersist {
 
         configuration = new Configuration();
         configuration.configure(); // By default, hibernate.cfg.xml is applied
+        configuration.addAnnotatedClass(Student.class);
         sessionFactory = configuration.buildSessionFactory();
         session = sessionFactory.openSession();
 
