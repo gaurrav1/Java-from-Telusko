@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="alien1" class="org.Spring.Alien" autowire="byName">
+
+<!--        Setter Injection    -->
+<!--        <property name="age" value="21"/>   -->
+<!--        <property name="com" ref="com"/>    -->
+        <!--        <property name="com" ref="com"/>-->
+
+
+<!--        Constructor injection-->
+<!--        <constructor-arg type="org.Spring.Computer" ref="com"/>    -->
+<!--        <constructor-arg type="int" value="21"/>                      -->
+
+<!--        <constructor-arg index="0" value="21"/>     -->
+<!--        <constructor-arg index="1" ref="com"/>   -->
+
+<!--        <constructor-arg name="com" ref="com"/>  -->
+<!--        <constructor-arg name="age" value="23"/>    -->
+
+        <property name="age" value="21"/>
+        <property name="com">
+<!--            // Inner bean-->
+            <bean id="com" class="org.Spring.Laptop" primary="true"/>
+        </property>
+
+    </bean>
+
+    <bean id="com1" class="org.Spring.Desktop" lazy-init="true"/>
+    <bean id="com" class="org.Spring.Laptop" primary="true"/>
+<!--    <bean id="alien2" class="org.Spring.Alien" scope="prototype">               -->
+<!--    </bean> &lt;!&ndash; Objection creation will be done 2 times &ndash;&gt;    -->
+
+</beans>
