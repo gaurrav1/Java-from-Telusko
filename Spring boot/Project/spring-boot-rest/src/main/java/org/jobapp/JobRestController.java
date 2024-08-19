@@ -40,4 +40,10 @@ public class JobRestController {
         jobService.deleteJob(postId);
     }
 
+    @GetMapping("/load")
+    public String loadData() {
+        jobService.loadData();
+        return "Loaded";
+    }
+
 }
