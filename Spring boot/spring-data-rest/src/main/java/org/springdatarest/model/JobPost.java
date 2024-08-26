@@ -1,4 +1,4 @@
-package org.jobapp.model;
+package org.springdatarest.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
